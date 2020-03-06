@@ -1,0 +1,36 @@
+{
+	"deals": [
+		{
+			"name": "Crazy Deal",
+			"info": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+			"save": 95,
+			"price": 225.95,
+			"currency": "R",
+			"color": "red"
+		},
+		{
+			"name": "Double Deal",
+			"info": "Lorem ipsum dolor sit amet consectetur.",
+			"save": 49,
+			"price": 159.95,
+			"currency": "R",
+			"color": "yellow"
+		},
+		{
+			"name": "Big Deal",
+			"info": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
+			"save": 80,
+			"price": 199.95,
+			"currency": "R",
+			"color": "red"
+		},
+		{
+			"name": "Friday Deal",
+			"info": "Lorem ipsum dolor sit amet consectetur.",
+			"save": 64,
+			"price": 129.95,
+			"currency": "R",
+			"color": "yellow"
+		}
+	]
+}

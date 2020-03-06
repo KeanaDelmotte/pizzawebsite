@@ -1,0 +1,62 @@
+@import "../variables.scss";
+.content-cart {
+	z-index: 2;
+
+	&--btn {
+		color: $color-white;
+		margin: 0 2vw 0 2vw;
+
+		font-size: 2rem;
+		font-family: $font-primary;
+		align-self: center;
+		font-weight: bolder;
+		transition: all 0.3s;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		border: none;
+		outline: none;
+		-webkit-tap-highlight-color: transparent;
+		&::after {
+			content: "";
+			opacity: 0;
+			height: 2px;
+			transition: transform 0.5s, opacity 0.2s;
+			display: block;
+			text-align: center;
+			transform-origin: center;
+			width: 0.05vw;
+
+			border: none;
+		}
+		&::-moz-focus-inner {
+			border: 0;
+			outline: 0;
+		}
+
+		&:hover,
+		&:focus {
+			color: $color-yellow;
+			cursor: pointer;
+			outline: 0;
+			border: none;
+			@media (hover: none) {
+				color: $color-white;
+			}
+		}
+		@media only screen and (max-width: $bp-smallmedium) {
+			font-size: $font-size-heading_supersmall--smaller;
+		}
+		@media only screen and (max-width: $bp-mobilelarge) {
+			font-size: 1.5rem;
+		}
+	}
+	&--icon {
+		color: $color-black;
+		height: 2rem;
+		width: 2rem;
+		font-weight: bolder;
+		margin: 0 0 0 5rem;
+	}
+}

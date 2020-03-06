@@ -1,0 +1,186 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+.contact {
+	padding-top: 20rem;
+	font-size: $font-size__main;
+	font-family: $font-secondary;
+	color: $color-black;
+	width: 80%;
+	margin: 0 auto;
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	justify-items: center;
+	background-size: cover;
+	gap: 5rem;
+
+	&__heading {
+		font-size: 5rem;
+		font-family: $font-primary;
+		color: $color-black;
+		grid-row: 1 / span 1;
+		grid-column: 1/ -1;
+		justify-self: center;
+	}
+	&-item {
+		display: grid;
+		grid-template-rows: [icon-start] 1fr [icon-end name-start] 1fr [name-end num-start] 1fr [num-end];
+		justify-items: center;
+		gap: 0.5rem;
+		&__icon {
+			grid-row: icon-start/ icon-end;
+			height: 2rem;
+			width: 2rem;
+			align-self: end;
+			fill: $color-white;
+			color: $color-yellow;
+		}
+		&__title {
+			grid-row: name-start / name-end;
+			font-weight: bold;
+			color: $color-black;
+		}
+		&__description {
+			grid-row: num-start / num-end;
+			align-self: start;
+		}
+	}
+	&--social {
+		background-color: transparent;
+
+		display: flex;
+		grid-column: 1 / -1;
+		justify-self: center;
+		z-index: 2;
+		margin-bottom: 5rem;
+		&-facebook {
+			margin-right: 2rem;
+			display: grid;
+			justify-items: center;
+			align-items: center;
+
+			&_buttonicon {
+				grid-row: 1 / span 1;
+				grid-column: 1 / span 1;
+				@include button-social-icon;
+				background-color: $color-facebook_blue;
+
+				&-facebook {
+					margin-left: 1rem;
+					height: 2rem;
+					width: 2rem;
+				}
+				&:hover {
+					cursor: pointer;
+				}
+			}
+
+			&_buttontext {
+				grid-row: 1 / span 1;
+				grid-column: 1 / span 1;
+				@include button-social_text;
+
+				&:hover ~ .contact--social-facebook_buttonicon,
+				&:focus ~ .contact--social-facebook_buttonicon {
+					transform: rotate(-75deg);
+				}
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+
+		&-twitter {
+			margin-right: 2rem;
+			display: grid;
+
+			align-self: center;
+
+			&_heading {
+				grid-row: 14 / span 1;
+				grid-column: 2 / span 1;
+			}
+
+			&_buttonicon {
+				grid-row: 1 / span 1;
+				grid-column: 1 / span 1;
+				@include button-social-icon;
+				background-color: $color-twitter_blue;
+				&:hover {
+					cursor: pointer;
+				}
+
+				&-twitter {
+					margin-left: 1rem;
+					height: 2rem;
+					width: 2rem;
+				}
+			}
+
+			&_buttontext {
+				grid-row: 1 / span 1;
+				grid-column: 1 / span 1;
+
+				&:hover ~ .contact--social-twitter_buttonicon,
+				&:focus ~ .contact--social-twitter_buttonicon {
+					transform: rotate(-75deg);
+				}
+				&:hover {
+					cursor: pointer;
+				}
+				@include button-social_text;
+			}
+		}
+
+		&-insta {
+			margin-right: 2rem;
+			display: grid;
+			justify-items: center;
+			align-items: center;
+
+			&_buttonicon {
+				grid-row: 1 / span 1;
+				grid-column: 1 / span 1;
+				@include button-social-icon;
+				background-color: $color-facebook_blue;
+
+				background: linear-gradient(
+					45deg,
+					#f09433 0%,
+					#e6683c 25%,
+					#dc2743 50%,
+					#cc2366 75%,
+					#bc1888 100%
+				);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+
+				&-insta {
+					height: 2rem;
+					width: 2rem;
+					margin-left: 1rem;
+				}
+				&:hover {
+					cursor: pointer;
+				}
+			}
+
+			&_buttontext {
+				grid-row: 1 / span 1;
+				grid-column: 1 / span 1;
+				@include button-social_text;
+
+				&:hover ~ .contact--social-insta_buttonicon,
+				&:focus ~ .contact--social-insta_buttonicon {
+					transform: rotate(-75deg);
+				}
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	@include media-medlargest_contact;
+	@include media-smallmed_contact;
+	@include media-supersmall_contact;
+	@include media-medsmall_contact;
+}

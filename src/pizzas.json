@@ -1,0 +1,661 @@
+{
+	"pizzas": [
+		{
+			"name": "Margherita",
+			"description": "Pizza topped with mozzarlla, tomato sauceand basil",
+			"lowCarb": false,
+			"kidFriendly": true,
+			"litePizza": false,
+			"vegan": false,
+			"vegeterian": true,
+			"img": "/img/pizza-Margherita.jpg",
+
+			"ingredients": [
+				{
+					"name": "mozerella",
+					"pricelarge": 15,
+					"pricemed": 10,
+					"img": "/img/mozerella.jpeg"
+				},
+				{
+					"name": "tomato sauce",
+					"pricelarge": 10,
+					"pricemed": 7,
+					"img": "/img/tomatosauce.jpeg"
+				},
+				{
+					"name": "basil",
+					"pricelarge": 15,
+					"pricemed": 10,
+					"img": "/img/basil.jpeg"
+				}
+			],
+			"base": {
+				"name": "Regular",
+				"ingredients": ["yeast", "bread flour", "olive oil", "salt"],
+				"size": "large",
+				"pricereg": 0,
+				"pricelarge": 0,
+				"currency": "R",
+				"vegan": true,
+				"img": "/img/base-regular.jpeg",
+				"description": "regular wheat flour pizza base"
+			},
+			"price": 100,
+			"currency": "R",
+			"size": "large",
+			"id": "1",
+			"extraIngredients": [],
+			"extras": [],
+			"removeIngredients": [],
+			"amount": 0,
+			"customPrice": 100,
+			"customSize": { "name": "large", "price": 100 }
+		},
+		{
+			"name": "Hawaiian",
+			"description": "Classic Hawaiian Pizza combines pizza sauce, cheese, cooked ham, and pineapple",
+			"lowCarb": false,
+			"litePizza": false,
+			"kidFriendly": true,
+			"vegan": false,
+			"vegeterian": false,
+			"img": "/img/pizza-Hawaiian.jpg",
+			"ingredients": [
+				{
+					"name": "mozerella",
+					"pricelarge": 15,
+					"pricemed": 10,
+					"img": "/img/mozerella.jpeg"
+				},
+				{
+					"name": "tomato sauce",
+					"pricelarge": 10,
+					"pricemed": 7,
+					"img": "/img/tomatosauce.jpeg"
+				},
+				{
+					"name": "pineapple",
+					"pricelarge": 15,
+					"pricemed": 10,
+					"img": "/img/pineapple.jpeg"
+				},
+				{
+					"name": "ham",
+					"pricelarge": 15,
+					"pricemed": 10,
+					"img": "/img/ham.jpeg"
+				}
+			],
+			"base": {
+				"name": "Regular",
+				"ingredients": ["yeast", "bread flour", "olive oil", "salt"],
+				"size": "large",
+				"pricereg": 0,
+				"pricelarge": 0,
+				"currency": "R",
+				"vegan": true,
+				"img": "/img/base-regular.jpeg",
+				"description": "regular wheat flour pizza base"
+			},
+			"price": 120,
+			"currency": "R",
+			"size": "large",
+			"id": "2",
+			"extraIngredients": [],
+			"extras": [],
+			"removeIngredients": [],
+			"amount": 0,
+			"customPrice": 120,
+			"customSize": { "name": "large", "price": 120 }
+		},
+		{
+			"name": "Vegeterian",
+			"vegan": false,
+			"kidFriendly": false,
+			"description": "Pizza topped with mozzarlla, tomato sauce, pineapple, banana, bell pepper and mushroom",
+			"vegeterian": true,
+			"lowCarb": false,
+			"litePizza": false,
+			"img": "/img/pizza-Vegeterian.jpg",
+
+			"ingredients": [
+				{
+					"name": "mozerella",
+					"pricelarge": 15,
+					"pricemed": 10,
+					"img": "/img/mozerella.jpeg"
+				},
+				{
+					"name": "tomato sauce",
+					"pricelarge": 10,
+					"pricemed": 7,
+					"img": "/img/tomatosauce.jpeg"
+				},
+				{
+					"name": "pineapple",
+					"pricelarge": 15,
+					"pricemed": 10,
+					"img": "/img/pineapple.jpeg"
+				},
+				{
+					"name": "banana",
+					"pricelarge": 10,
+					"pricemed": 7,
+					"img": "/img/banana.jpeg"
+				},
+				{
+					"name": "bell pepper",
+					"pricelarge": 10,
+					"pricemed": 7,
+					"img": "/img/bellpepper.jpeg"
+				},
+				{
+					"name": "mushroom",
+					"pricelarge": 15,
+					"pricemed": 10,
+					"img": "/img/mushroom.jpeg"
+				}
+			],
+			"base": {
+				"name": "Regular",
+				"ingredients": ["yeast", "bread flour", "olive oil", "salt"],
+				"size": "large",
+				"pricereg": 0,
+				"pricelarge": 0,
+				"currency": "R",
+				"vegan": true,
+				"img": "/img/base-regular.jpeg",
+				"description": "regular wheat flour pizza base"
+			},
+			"price": 130,
+			"currency": "R",
+			"size": "large",
+			"id": "3",
+			"extraIngredients": [],
+			"extras": [],
+			"removeIngredients": [],
+			"amount": 0,
+			"customPrice": 130,
+			"customSize": { "name": "large", "price": 130 }
+		},
+		{
+			"name": "Pizza-x",
+			"description": "Pizza topped with mozerella, tomato sauce, kale, basil pesto, mushrooms and feta",
+			"vegan": false,
+			"kidFriendly": false,
+			"vegeterian": true,
+			"lowCarb": false,
+			"litePizza": false,
+			"img": "/img/pizza-Pizza-x.jpg",
+
+			"ingredients": [
+				{
+					"name": "mozerella",
+					"pricelarge": 15,
+					"pricemed": 10,
+					"img": "/img/mozerella.jpeg"
+				},
+				{
+					"name": "tomato sauce",
+					"pricelarge": 10,
+					"pricemed": 7,
+					"img": "/img/tomatosauce.jpeg"
+				},
+				{
+					"name": "olives",
+					"pricelarge": 15,
+					"pricemed": 10,
+					"img": "/img/olives.jpeg"
+				},
+				{
+					"name": "kale",
+					"pricelarge": 10,
+					"pricemed": 7,
+					"img": "/img/kale.jpeg"
+				},
+				{
+					"name": "basil pesto",
+					"pricelarge": 15,
+					"pricemed": 10,
+					"img": "/img/pesto.jpeg"
+				},
+				{
+					"name": "mushroom",
+					"pricelarge": 15,
+					"pricemed": 10,
+					"img": "/img/mushroom.jpeg"
+				},
+				{
+					"name": "feta",
+					"pricelarge": 15,
+					"pricemed": 10,
+					"img": "/img/feta.jpeg"
+				}
+			],
+			"base": {
+				"name": "Regular",
+				"ingredients": ["yeast", "bread flour", "olive oil", "salt"],
+				"size": "large",
+				"pricereg": 0,
+				"pricelarge": 0,
+				"currency": "R",
+				"vegan": true,
+				"img": "/img/base-regular.jpeg",
+				"description": "regular wheat flour pizza base"
+			},
+			"price": 130,
+			"currency": "R",
+			"size": "large",
+			"id": "4",
+			"extraIngredients": [],
+			"extras": [],
+			"removeIngredients": [],
+			"amount": 0,
+			"customPrice": 130,
+			"customSize": { "name": "large", "price": 130 }
+		},
+		{
+			"name": "Pepperoni",
+			"description": "Pizza topped with mozerella, tomato sauce, and pepperoni",
+			"vegan": false,
+			"vegeterian": false,
+			"kidFriendly": true,
+			"lowCarb": false,
+			"litePizza": false,
+			"img": "/img/Pizza-Pepperoni.jpg",
+
+			"ingredients": [
+				{
+					"name": "mozerella",
+					"pricelarge": 15,
+					"pricemed": 10,
+					"img": "/img/mozerella.jpeg"
+				},
+				{
+					"name": "tomato sauce",
+					"pricelarge": 10,
+					"pricemed": 7,
+					"img": "/img/tomatosauce.jpeg"
+				},
+				{
+					"name": "pepperoni",
+					"pricelarge": 15,
+					"pricemed": 10,
+					"img": "/img/pepperoni.jpeg"
+				}
+			],
+			"base": {
+				"name": "Regular",
+				"ingredients": ["yeast", "bread flour", "olive oil", "salt"],
+				"size": "large",
+				"pricereg": 0,
+				"pricelarge": 0,
+				"currency": "R",
+				"vegan": true,
+				"img": "/img/base-regular.jpeg",
+				"description": "regular wheat flour pizza base"
+			},
+			"price": 120,
+			"currency": "R",
+			"size": "large",
+			"id": "5",
+			"extraIngredients": [],
+			"extras": [],
+			"removeIngredients": [],
+			"amount": 0,
+			"customPrice": 120,
+			"customSize": { "name": "large", "price": 120 }
+		},
+		{
+			"name": "Pizza-y",
+			"description": "Pizza topped with garlic, olives, basil, rosemary and oregano",
+			"kidFriendly": false,
+			"vegan": true,
+			"vegeterian": true,
+			"lowCarb": false,
+			"litePizza": false,
+			"img": "/img/Pizza-Pizza-y.jpg",
+
+			"ingredients": [
+				{
+					"name": "garlic",
+					"pricelarge": 10,
+					"pricemed": 7,
+					"img": "/img/garlic.jpeg"
+				},
+				{
+					"name": "olives",
+					"pricelarge": 15,
+					"pricemed": 12,
+					"img": "/img/olives.jpeg"
+				},
+				{
+					"name": "basil",
+					"pricelarge": 10,
+					"pricemed": 7,
+					"img": "/img/basil.jpeg"
+				},
+				{
+					"name": "rosemary",
+					"pricelarge": 10,
+					"pricemed": 7,
+					"img": "/img/rosemary.jpeg"
+				},
+				{
+					"name": "oregano",
+					"pricelarge": 10,
+					"pricemed": 7,
+					"img": "/img/oregano.jpeg"
+				}
+			],
+			"base": {
+				"name": "Regular",
+				"ingredients": ["yeast", "bread flour", "olive oil", "salt"],
+				"size": "large",
+				"pricereg": 0,
+				"pricelarge": 0,
+				"currency": "R",
+				"vegan": true,
+				"img": "/img/base-regular.jpeg",
+				"description": "regular wheat flour pizza base"
+			},
+			"price": 120,
+			"currency": "R",
+			"size": "large",
+			"id": "6",
+			"extraIngredients": [],
+			"extras": [],
+			"removeIngredients": [],
+			"amount": 0,
+			"customPrice": 120,
+			"customSize": { "name": "large", "price": 120 }
+		},
+		{
+			"name": "Pizza-z",
+			"description": "Pizza topped with olives, basil pesto and feta",
+			"vegan": false,
+			"vegeterian": true,
+			"lowCarb": false,
+			"litePizza": false,
+			"kidFriendly": false,
+			"img": "/img/pizza-Pizza-z.jpg",
+
+			"ingredients": [
+				{
+					"name": "olives",
+					"pricelarge": 15,
+					"pricemed": 12,
+					"img": "/img/olives.jpeg"
+				},
+				{
+					"name": "feta",
+					"pricelarge": 15,
+					"pricemed": 12,
+					"img": "/img/feta.jpeg"
+				},
+				{
+					"name": "basil pesto",
+					"pricelarge": 15,
+					"pricemed": 12,
+					"img": "/img/pesto.jpeg"
+				}
+			],
+			"base": {
+				"name": "Regular",
+				"ingredients": ["yeast", "bread flour", "olive oil", "salt"],
+				"size": "large",
+				"pricereg": 0,
+				"pricelarge": 0,
+				"currency": "R",
+				"vegan": true,
+				"img": "/img/base-regular.jpeg",
+				"description": "regular wheat flour pizza base"
+			},
+			"price": 120,
+			"currency": "R",
+			"size": "large",
+			"id": "7",
+			"extraIngredients": [],
+			"extras": [],
+			"removeIngredients": [],
+			"amount": 0,
+			"customPrice": 120,
+			"customSize": { "name": "large", "price": 120 }
+		}
+	],
+	"bases": [
+		{
+			"name": "Regular",
+			"ingredients": ["yeast", "bread flour", "olive oil", "salt"],
+			"size": "large",
+			"pricereg": 0,
+			"pricelarge": 0,
+			"currency": "R",
+			"vegan": true,
+			"img": "/img/base-regular.jpeg",
+			"description": "regular wheat flour pizza base"
+		},
+		{
+			"name": "Zuchini",
+			"ingredients": [
+				"zuchini",
+				"bread flour",
+				"olive oil",
+				"salt",
+				"chia seeds"
+			],
+			"size": "medium",
+			"pricereg": 20,
+			"pricelarge": 25,
+			"currency": "R",
+			"vegan": true,
+			"img": "/img/base-zuchini.jpeg",
+			"description": "pizza base made from zuchinis"
+		},
+		{
+			"name": "Pumpkin",
+			"ingredients": ["pumpkin", "bread flour", "olive oil", "salt"],
+			"size": "medium",
+			"pricereg": 20,
+			"pricelarge": 25,
+			"currency": "R",
+			"vegan": true,
+			"img": "/img/base-pumpkin.jpeg",
+			"description": "pizza base made from pumpkin"
+		},
+		{
+			"name": "Rye",
+			"ingredients": ["yeast", "rye flour", "olive oil", "salt", "molasses"],
+			"size": "medium",
+			"pricereg": 20,
+			"pricelarge": 25,
+			"currency": "R",
+			"vegan": true,
+			"img": "/img/base-rye.jpeg",
+			"description": "pizza base made with rye flour"
+		}
+	],
+	"ingredients": [
+		{
+			"name": "banana",
+			"pricelarge": 10,
+			"pricemed": 7,
+			"img": "/img/banana.jpeg"
+		},
+
+		{
+			"name": "basil pesto",
+			"pricelarge": 15,
+			"pricemed": 10,
+			"img": "/img/pesto.jpeg"
+		},
+		{
+			"name": "basil",
+			"pricelarge": 10,
+			"pricemed": 7,
+			"img": "/img/basil.jpeg"
+		},
+		{
+			"name": "bell pepper",
+			"pricelarge": 10,
+			"pricemed": 7,
+			"img": "/img/bellpepper.jpeg"
+		},
+		{
+			"name": "feta",
+			"pricelarge": 15,
+			"pricemed": 10,
+			"img": "/img/feta.jpeg"
+		},
+		{
+			"name": "garlic",
+			"pricelarge": 10,
+			"pricemed": 7,
+			"img": "/img/garlic.jpeg"
+		},
+		{
+			"name": "ham",
+			"pricelarge": 15,
+			"pricemed": 10,
+			"img": "/img/ham.jpeg"
+		},
+		{
+			"name": "kale",
+			"pricelarge": 10,
+			"pricemed": 7,
+			"img": "/img/kale.jpeg"
+		},
+		{
+			"name": "mozerella",
+			"pricelarge": 15,
+			"pricemed": 10,
+			"img": "/img/mozerella.jpeg"
+		},
+		{
+			"name": "mushroom",
+			"pricelarge": 15,
+			"pricemed": 10,
+			"img": "/img/mushroom.jpeg"
+		},
+		{
+			"name": "olive oil",
+			"pricelarge": 10,
+			"pricemed": 7,
+			"img": "/img/oliveoil.jpeg"
+		},
+		{
+			"name": "olives",
+			"pricelarge": 15,
+			"pricemed": 10,
+			"img": "/img/olives.jpeg"
+		},
+		{
+			"name": "pepperoni",
+			"pricelarge": 15,
+			"pricemed": 10,
+			"img": "/img/pepperoni.jpeg"
+		},
+		{
+			"name": "pineapple",
+			"pricelarge": 15,
+			"pricemed": 10,
+			"img": "/img/pineapple.jpeg"
+		},
+		{
+			"name": "tomato sauce",
+			"pricelarge": 10,
+			"pricemed": 7,
+			"img": "/img/tomatosauce.jpeg"
+		},
+		{
+			"name": "zuchini",
+			"pricelarge": 10,
+			"pricemed": 7,
+			"img": "/img/zuchini.jpeg"
+		},
+		{
+			"name": "bacon",
+			"pricelarge": 15,
+			"pricemed": 10,
+			"img": "/img/bacon.jpeg"
+		},
+		{
+			"name": "onion",
+			"pricelarge": 10,
+			"pricemed": 7,
+			"img": "/img/onion.jpeg"
+		},
+		{
+			"name": "vegan cheese",
+			"pricelarge": 15,
+			"pricemed": 10,
+			"img": "/img/vegancheese.jpeg"
+		},
+		{
+			"name": "anchovies",
+			"pricelarge": 10,
+			"pricemed": 7,
+			"img": "/img/anchovies.jpeg"
+		},
+		{
+			"name": "chicken",
+			"pricelarge": 15,
+			"pricemed": 10,
+			"img": "/img/chicken.jpeg"
+		},
+		{
+			"name": "ground beef",
+			"pricelarge": 15,
+			"pricemed": 10,
+			"img": "/img/groundbeef.jpeg"
+		},
+		{
+			"name": "egg",
+			"pricelarge": 10,
+			"pricemed": 7,
+			"img": "/img/egg.jpeg"
+		}
+	],
+	"additional": [
+		{
+			"name": "coca-cola",
+			"price": 10,
+			"currency": "R",
+			"size": "500ml",
+			"img": "/img/coca-cola.jpg"
+		},
+		{
+			"name": "magnum",
+			"price": 15,
+			"currency": "R",
+			"size": "100ml",
+			"img": "/img/magnum.jpeg"
+		},
+		{
+			"name": "fanta",
+			"price": 10,
+			"currency": "R",
+			"size": "500ml",
+			"img": "/img/fanta.jpeg"
+		},
+		{
+			"name": "iced tea",
+			"price": 15,
+			"currency": "R",
+			"size": "500ml",
+			"img": "/img/iced-tea.jpeg"
+		}
+	],
+	"icons": [
+		{
+			"name": "vegeterian",
+			"img": "/img/logo-veg--black.png",
+			"nameShort": "veg"
+		}
+	],
+	"sizes": [
+		{ "name": "medium", "price": 0 },
+		{ "name": "large", "price": 15 }
+	]
+}

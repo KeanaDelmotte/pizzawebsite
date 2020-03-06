@@ -1,0 +1,66 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+.footer {
+	height: 100%;
+	background: $color-grey-darker;
+	color: $color-black;
+
+	&__line {
+		height: 2px;
+		background-color: $color-black;
+		width: 100%;
+	}
+	display: grid;
+	grid-template-rows: 1fr 2fr;
+	grid-template-columns: repeat(3, auto);
+	align-items: center;
+	justify-items: center;
+	gap: 4rem;
+	align-items: center;
+	justify-items: center;
+	&__logo {
+		grid-row: 2 / span 1;
+		grid-column: 2 / span 1;
+		justify-self: center;
+		margin-bottom: 2rem;
+		height: 8rem;
+	}
+	&__promiseheading {
+		grid-row: 1 / span 1;
+		grid-column: 1 / -1;
+		justify-self: center;
+		font-size: $font-size-heading_small;
+		color: $color-yellow;
+		font-family: $font-primary;
+		padding-top: 3rem;
+	}
+	&__promisetext {
+		grid-row: 2 / span 1;
+		grid-column: 1 / span 1;
+		font-family: $font-secondary;
+		font-size: 1.5rem;
+		text-align: right;
+		justify-self: center;
+		margin: 1rem 2rem;
+	}
+	&__disclaimertext {
+		grid-row: 2 / span 1;
+		grid-column: 3 / span 1;
+		justify-self: center;
+		font-family: $font-secondary;
+		font-size: 1.5rem;
+		text-align: left;
+		margin: 0 2rem;
+	}
+	&__logocredit {
+		grid-row: 2 / span 1;
+		grid-column: 3 / span 1;
+		align-self: end;
+		justify-self: end;
+		margin: 5rem 2rem 1rem 2rem;
+	}
+	@include media-smallmed_footer;
+	@include media-supersmall_footer;
+	@include media-medsmall_footer;
+	@include media-smallsmall_footer;
+}

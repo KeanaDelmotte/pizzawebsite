@@ -1,0 +1,70 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+.header {
+	height: 100vh;
+	width: 100%;
+
+	display: grid;
+	grid-template-rows: 1fr;
+	gap: 3rem;
+	overflow: hidden;
+	&__title {
+		color: $color-white;
+		font-family: $font-primary;
+		font-size: $font-size-heading_large;
+		grid-row: 1 / span 1;
+		grid-column: 1/-1;
+		z-index: 2;
+		align-self: center;
+		margin-top: 7rem;
+		margin-bottom: 20%;
+		justify-self: center;
+		text-align: center;
+	}
+
+	&__subtitle {
+		color: $color-white;
+		font-family: $font-primary;
+		font-size: $font-size-heading_med;
+		grid-row: 1 / span 1;
+
+		grid-column: 1/-1;
+		z-index: 2;
+		text-align: center;
+		align-self: center;
+	}
+
+	&__background {
+		grid-row: 1 / span 2;
+		grid-column: 1/-1;
+	}
+	&__background-image {
+		height: 100%;
+		width: 100%;
+		z-index: 1;
+		object-fit: cover;
+		filter: brightness(80%);
+	}
+	&__btn {
+		grid-row: 2 / span 1;
+		grid-column: 1/-1;
+		z-index: 2;
+		justify-self: center;
+		display: none;
+		@media only screen and (max-width: $bp-mobilelarge) {
+			display: block;
+		}
+		&--icon {
+			height: 5rem;
+			width: 5rem;
+			color: $color-white;
+			text-align: center;
+		}
+	}
+	@include media-superlargest_header;
+	@include media-large_header;
+	@include media-smallmed_header;
+	@include media-supersmall_header;
+	@include media-medsmall_header;
+	@include media-mobilelarge_header;
+}
