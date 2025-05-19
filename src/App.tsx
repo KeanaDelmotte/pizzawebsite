@@ -16,7 +16,7 @@ import cn from "classnames";
 const App = () => {
 	const [menuExtended, setMenuExtended] = useState(false);
 	const [cart, setCart] = useState<Cart>(
-		JSON.parse(localStorage.getItem("cart") ?? "{pizzas: [], extras: []}")
+		JSON.parse(localStorage.getItem("cart") ?? "{\"pizzas\": [], \"extras\": []}")
 	);
 	const [currentPizza, setCurrentPizza] = useState();
 	const [cartTotal, setCartTotal] = useState(0);
