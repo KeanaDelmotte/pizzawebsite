@@ -11,14 +11,14 @@ interface FullMenuProps {
 }
 const FullMenu: React.FC<FullMenuProps> = ({
 	menuExtended,
-	setMenuExtended
+	setMenuExtended,
 }) => {
 	const bases: Base[] = data.bases;
 	const pizzas: Pizza[] = data.pizzas;
 	const extras: Extra[] = data.additional;
 	const toppings: Ingredient[] = data.ingredients;
 	return (
-		<div className="fullMenu">
+		<div className="fullMenu" id="fullMenu">
 			<hr className=" menu-topline menu-topline--1" />
 			<hr className=" menu-topline menu-topline--2" />
 
@@ -52,7 +52,7 @@ const FullMenu: React.FC<FullMenuProps> = ({
 					<h1 className="menu__heading">World's Best Pizza</h1>
 					<h2 className=" menu__freedelivery">Free delivery!</h2>
 					<ul className=" menu__bases">
-						{bases.map(base => (
+						{bases.map((base) => (
 							<li className="menu-item " key={base.name}>
 								<span className="menu-item__title">{`${base.name} base`}</span>
 								<hr className="menu-item__divider" />
@@ -72,7 +72,7 @@ const FullMenu: React.FC<FullMenuProps> = ({
 					<h3 className="menu__mainmenu">Main Menu</h3>
 
 					<ul className=" menu__main">
-						{pizzas.map(pizza => (
+						{pizzas.map((pizza) => (
 							<li className="menu-item" key={pizza.orderId}>
 								{pizza.lowCarb && (
 									<img
@@ -103,7 +103,7 @@ const FullMenu: React.FC<FullMenuProps> = ({
 					<h2 className="menu__drinksheading">Drinks and Treats</h2>
 
 					<ul className="menu__drinks">
-						{extras.map(extra => (
+						{extras.map((extra) => (
 							<li className="menu-item" key={extra.name}>
 								<span className="menu-item__title">
 									{extra.name}{" "}
@@ -120,7 +120,7 @@ const FullMenu: React.FC<FullMenuProps> = ({
 					<ul className=" menu__toppings">
 						<li className="menu-item">
 							<span className="menu-item__title">
-								{toppings.map(ingredient => ingredient.name).join(", ")}
+								{toppings.map((ingredient) => ingredient.name).join(", ")}
 							</span>
 							<span className="menu-item__price menu-item__price--regular">
 								R10

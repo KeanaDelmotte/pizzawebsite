@@ -7,12 +7,14 @@ interface CartBtnProps {
 	setInCart: React.Dispatch<SetStateAction<boolean>>;
 	setNavColor: React.Dispatch<SetStateAction<boolean>>;
 	headerInView: boolean;
+	setShowCartPopup: React.Dispatch<SetStateAction<boolean>>;
 }
 const CartBtn: React.FC<CartBtnProps> = ({
 	inCart,
 	setInCart,
 	setNavColor,
-	headerInView
+	headerInView,
+	setShowCartPopup,
 }) => {
 	const { pathname } = useLocation();
 
@@ -20,15 +22,16 @@ const CartBtn: React.FC<CartBtnProps> = ({
 		return null;
 	}
 	return (
-		<Link
-			to={`/cart/`}
+		<div
+			// to={`/cart/`}
 			className="content-cart "
 			onClick={() => {
-				setInCart(true);
+				setShowCartPopup(true);
+				// setInCart(true);
 			}}
 		>
 			<button className="content-cart--btn nav__item">Cart</button>
-		</Link>
+		</div>
 	);
 };
 

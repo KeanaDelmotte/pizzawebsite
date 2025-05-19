@@ -9,9 +9,10 @@ export interface Pizza {
 	price: number;
 	currency: string;
 	size: string;
+	measurementCm: number;
 	id: string;
 	extraIngredients: Ingredient[];
-	extras: Extra[];
+	// extras: Extra[];
 	removeIngredients: Ingredient[];
 	orderId?: string;
 	amount: number;
@@ -22,6 +23,11 @@ export interface Pizza {
 	kidFriendly: boolean;
 	img: string;
 	customSize: Size;
+}
+
+export interface Cart {
+	pizzas: Pizza[];
+	extras: Extra[];
 }
 export interface Ingredient {
 	name: string;
@@ -34,6 +40,7 @@ export interface Base {
 	name: string;
 	ingredients: string[];
 	size: string;
+	measurementCm: number;
 	pricereg: number;
 	pricelarge: number;
 	currency: string;
@@ -46,6 +53,7 @@ export interface Extra {
 	name: string;
 	price: number;
 	currency: string;
+	amount: number;
 	size: string;
 	img: string;
 }
@@ -72,6 +80,7 @@ export interface Website {
 export interface Size {
 	name: string;
 	price: number;
+	measurementCm: number;
 }
 export interface Deal {
 	name: string;

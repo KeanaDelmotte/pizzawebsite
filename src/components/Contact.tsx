@@ -6,7 +6,7 @@ import {
 	FiGlobe,
 	FiInstagram,
 	FiFacebook,
-	FiTwitter
+	FiTwitter,
 } from "react-icons/fi";
 import data from "../contact.json";
 import { PhoneNumber, Email, Website } from "../interfaces";
@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
 	return (
 		<section id="contact" className="contact">
 			<h2 className="contact__heading">Contact Us</h2>
-			{phoneNumbers.map(number => (
+			{phoneNumbers.map((number) => (
 				<div className="contact-item" key={number.PhoneNumber}>
 					<span className="contact-item__title">{number.name}</span>
 
@@ -27,7 +27,7 @@ const Contact: React.FC = () => {
 				</div>
 			))}
 
-			{emails.map(email => (
+			{emails.map((email) => (
 				<div className="contact-item" key={email.adress}>
 					<span className="contact-item__title">{email.name}</span>
 					<FiMail className="contact-item__icon" />
@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
 				</div>
 			))}
 
-			{websites.map(website => (
+			{websites.map((website) => (
 				<div className="contact-item" key={website.adress}>
 					<span className="contact-item__title">{website.name}</span>
 					<FiGlobe className="contact-item__icon" />
@@ -47,11 +47,11 @@ const Contact: React.FC = () => {
 				<div className="contact--social-facebook">
 					<a
 						className="contact--social-facebook_buttontext"
-						href="#butlers"
+						href="#redbrickPizza"
 						target="__blank"
 						rel="noreferrer noopener"
 					>
-						<span> @pizzaMe</span>
+						<span> @RedBrickPizza</span>
 					</a>
 
 					<a
@@ -69,16 +69,16 @@ const Contact: React.FC = () => {
 				<div className="contact--social-twitter">
 					<a
 						className="contact--social-twitter_buttontext"
-						href="#butlers"
+						href="#redbrickpizza"
 						target="__blank"
 						rel="noreferrer noopener"
 					>
-						@pizzaMe
+						@RedBrickPizza
 					</a>
 
 					<a
 						className="contact--social-twitter_buttonicon"
-						href="#butlers"
+						href="#redbrickpizza"
 						target="__blank"
 						tabIndex={-1}
 						aria-label="Go to Twitter Page"
@@ -95,12 +95,12 @@ const Contact: React.FC = () => {
 						target="__blank"
 						rel="noreferrer noopener"
 					>
-						@Pizzamee
+						@RedBrickPizza
 					</a>
 
 					<a
 						className="contact--social-insta_buttonicon"
-						href="#butlers"
+						href="#redbrickpizza"
 						target="__blank"
 						tabIndex={-1}
 						aria-label="Go to Instagram Page"

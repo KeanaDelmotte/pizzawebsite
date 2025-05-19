@@ -12,44 +12,50 @@
 	color: $color-black;
 	font-family: $font-primary;
 }
+
+@mixin button-with-hover-effect {
+	transition: all 0.2s;
+	&:hover,
+	&:focus {
+		cursor: pointer;
+		outline: none;
+		transform: scale(1.2);
+		box-shadow: 4px 4px 2px 0px lightgrey;
+	}
+	&:active {
+		transform: translateY(0.7rem);
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+	}
+}
+
 @mixin button {
 	align-self: center;
 	margin-top: 1rem;
 	margin-bottom: 2rem;
 	padding: 1.2rem 2rem;
-	// border-radius: 10rem;
 	font-size: 2rem;
-	// border: none;
-	border: 1px solid $color-black;
+	border: 2px solid $color-grey-med;
 	text-decoration: none;
 	display: inline-block;
-	// color: $color-white;
-	// background-color: $color-red;
 	background-color: white;
 	transition: all 0.2s;
 	position: relative;
 	z-index: 2;
 	border-image: none;
+	border-radius: 1rem;
 	-webkit-tap-highlight-color: transparent;
 	font-family: $font-primary;
 	color: $color-black;
 	&:hover,
 	&:focus {
-		// background-color: $color-black;
-		// color: $color-yellow;
 		cursor: pointer;
 		outline: none;
 		transform: scale(1.2);
 		box-shadow: 4px 4px 2px 0px lightgrey;
-
-		// box-shadow: none;
 	}
 	&:active {
-		// outline: 0;
 		transform: translateY(0.7rem);
 		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-	}
-	&::-moz-focus-inner {
 	}
 }
 @mixin button-contact {

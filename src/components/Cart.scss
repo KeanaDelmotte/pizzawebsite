@@ -1,5 +1,9 @@
 @import "../variables.scss";
 @import "../mixins.scss";
+.cart {
+	box-sizing: border-box;
+	width: 100%;
+}
 .cart-content {
 	display: grid;
 	grid-template-rows:
@@ -24,16 +28,70 @@
 	&--btn {
 		font-family: $font-primary;
 	}
+
+	&--popup {
+		position: fixed;
+		right: 0;
+		z-index: 10;
+		top: 0;
+		width: 30vw;
+		height: 100vh;
+		overflow-x: hidden;
+		background-color: white;
+		overflow-y: scroll;
+		border-left: 1px solid $color-grey-med;
+		// box-shadow: 0px 0px 6px 1px rgba(173, 166, 173, 1);
+
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.cart-order {
+	width: 100%;
 }
 .cart-heading {
 	font-family: $font-primary;
 	grid-column: content-start/content-end;
 	grid-row: heading-start/heading-end;
 	font-size: 3rem;
+	text-align: center;
+	flex-grow: 1;
+	align-self: center;
 }
-.cart {
-	width: 100%;
 
+.cart-heading-container {
+	grid-column: content-start/content-end;
+	grid-row: heading-start/heading-end;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	padding: 1rem;
+	z-index: 5;
+
+	&--popup {
+		position: sticky;
+		top: 0;
+		background-color: $color-grey;
+		border-bottom: 1px solid $color-grey-med;
+	}
+}
+
+.cart-dismiss {
+	right: 0;
+	padding: 1rem;
+
+	border: none;
+	background-color: unset;
+	transition: all 0.2s;
+	&:hover {
+		transform: scale(1.2);
+	}
+}
+
+.cart {
 	font-family: $font-primary;
 	grid-row: content-start/content-end;
 	grid-column: content-start/content-end;
@@ -45,20 +103,44 @@
 	@media only screen and (max-width: $bp-mobilemed) {
 		width: 80%;
 	}
+
+	&--popup {
+		width: auto;
+		display: flex;
+		flex-direction: column;
+		row-gap: 1rem;
+	}
+	&-btns {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		gap: 1rem;
+		grid-column: content-start / content-end;
+		grid-row: btn-start / btn-end;
+	}
+	&-btn {
+		@include button;
+		margin: 1rem auto;
+		text-align: center;
+		display: block;
+		margin: 0;
+	}
+
 	&-clearbtn {
 		@include button;
 		margin: 1rem auto;
 		text-align: center;
 		display: block;
+		margin: 0;
 	}
 	&-item {
-		border: 1px solid $color-black;
+		border: 2px solid $color-grey-med;
 		background-color: white;
 		margin-bottom: 3rem;
 		box-sizing: border-box;
 		grid-column: content-start/content-end;
 		border-radius: 5px;
-		padding: 1.5rem 0 1rem 3rem;
+		padding: 1.5rem 1rem 3rem;
 		display: grid;
 		grid-template-rows:
 			[heading-start] fit-content(20%) [heading-end base-start] 1fr
@@ -67,16 +149,21 @@
 			[remove-end extra-start] 1fr
 			[extra-end custom-start] 1fr[custom-end];
 		grid-template-columns:
-			[img-start] 1fr [img-end heading-start] fit-content(20%)
+			[img-start] 1fr [img-end heading-start] fit-content(50%)
 			[heading-end item-start] 1fr
 			[item-end delete-start] fit-content(10%) [delete-end];
 		gap: 1rem;
 		font-size: 0.8rem;
 		align-items: center;
-		max-width: 100rem;
+		width: 100%;
 		max-height: 30rem;
-		margin: 0 auto;
 		transition: all 0.3s;
+
+		&--popup {
+			margin: 0;
+			align-self: center;
+			padding: 0.5rem;
+		}
 
 		@media only screen and (max-width: $bp-medmedium) {
 			grid-template-rows:
@@ -87,7 +174,7 @@
 				[toppings-end remove-start] fit-content(20%)
 				[remove-end extra-start] fit-content(10%)
 				[extra-end custom-start] fit-content(10%)
-				[custom-end ];
+				[custom-end];
 
 			grid-template-columns:
 				[ heading-start] fit-content(30%)
@@ -108,11 +195,11 @@
 			max-width: 30rem;
 			max-height: 40rem;
 		}
-		&:hover {
-			box-shadow: 7px 7px 10px 0px grey;
+		// &:hover {
+		// 	box-shadow: 7px 7px 10px 0px grey;
 
-			transform: scale(1.01) translateY(-0.2rem);
-		}
+		// 	transform: scale(1.01) translateY(-0.2rem);
+		// }
 		&--size {
 			grid-row: custom-start/custom-end;
 			grid-column: img-start/img-end;
@@ -142,7 +229,7 @@
 			}
 			&_display {
 				text-align: center;
-				font-size: 1rem;
+				font-size: 1.5rem;
 			}
 			&_increase {
 				background-color: #fafafa;
@@ -158,6 +245,10 @@
 			grid-column: heading-start/item-end;
 			align-self: center;
 			font-size: 1.5rem;
+
+			&--popup {
+				// display: none;
+			}
 			@media only screen and (max-width: $bp-medmedium) {
 				grid-column: 2/ -2;
 			}
@@ -178,9 +269,14 @@
 			box-sizing: border-box;
 			padding: 0;
 			height: 4rem;
-			width: 4rem;
+			width: fit-content;
 			margin: 0.5rem;
 			justify-self: end;
+
+			&--popup {
+				height: auto;
+				width: auto;
+			}
 			@media only screen and (max-width: $bp-medmedium) {
 				grid-column: 2/ -1;
 			}
@@ -226,6 +322,10 @@
 				grid-column: heading-start/delete-end;
 				justify-self: start;
 			}
+
+			&--popup {
+				font-size: 1.5rem;
+			}
 		}
 
 		&--img {
@@ -247,24 +347,40 @@
 
 			grid-row: base-start/base-end;
 			grid-column: heading-start/heading-end;
+
+			&--popup {
+				font-size: 1.5rem;
+			}
 		}
 		&--headingtoppings {
 			font-size: 2rem;
 
 			grid-row: toppings-start/toppings-end;
 			grid-column: heading-start/heading-end;
+
+			&--popup {
+				font-size: 1.5rem;
+			}
 		}
 		&--headingextra {
 			font-size: 2rem;
 
 			grid-row: extra-start/extra-end;
 			grid-column: heading-start/heading-end;
+
+			&--popup {
+				font-size: 1rem;
+			}
 		}
 		&--headingremoved {
 			font-size: 2rem;
 
 			grid-row: remove-start/remove-end;
 			grid-column: heading-start/heading-end;
+
+			&--popup {
+				font-size: 1.5rem;
+			}
 		}
 
 		&--base {
@@ -292,11 +408,63 @@
 			font-size: 1.5rem;
 		}
 	}
+
+	&-order-extra {
+		padding: 1rem;
+
+		width: 100%;
+		border: 2px solid $color-grey-med;
+		border-radius: 1rem;
+		justify-self: flex-start;
+		margin-bottom: 1rem;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(2, 1fr);
+		gap: 1rem;
+		box-sizing: border-box;
+
+		&_name {
+			grid-row: 1 / span 1;
+			grid-column: 1 / span 1;
+			justify-self: start;
+			text-transform: capitalize;
+		}
+
+		&_remove {
+			grid-row: 1 / span 1;
+			grid-column: 2 / span 1;
+			justify-self: end;
+		}
+
+		&_price {
+			grid-row: 2 / span 1;
+			grid-column: 1 / span 1;
+			justify-self: start;
+			font-size: 1.5rem;
+		}
+
+		&_amount {
+			justify-self: end;
+
+			display: flex;
+			flex-direction: row;
+			grid-row: 2 / span 1;
+			grid-column: 2 / span 1;
+			align-items: center;
+
+			&-number {
+				font-size: 1.5rem;
+				margin: 0 0.5rem 0 0.5rem;
+			}
+		}
+	}
 	&-empty {
 		font-family: $font-primary;
 		grid-row: content-start/content-end;
 		grid-column: content-start/content-end;
 		align-self: center;
+		margin-top: 2rem;
 	}
 	&-total {
 		font-family: $font-primary;

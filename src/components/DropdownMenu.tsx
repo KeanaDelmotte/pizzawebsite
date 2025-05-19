@@ -21,9 +21,9 @@ const DropdownMenu: React.FC<DropdownProps> = ({
 		<div className="dropdown">
 			<select
 				className="dropdown-menu"
-				defaultValue="large"
+				defaultValue="Large"
 				onChange={e => {
-					e.target.value === "large"
+					e.target.value === "Large"
 						? setSelectedPizza({
 								...pizza,
 								customSize: {
@@ -49,7 +49,7 @@ const DropdownMenu: React.FC<DropdownProps> = ({
 						className="dropdown-menu--opt"
 						// selected={size.name === "large" ? true : false}
 					>
-						{size.name}
+						{size.name[0].toUpperCase() + size.name.substring(1)}
 					</option>
 				))}
 			</select>

@@ -1,0 +1,47 @@
+@import "../variables.scss";
+
+.radio-group {
+	display: flex;
+	gap: 1rem;
+  font-family: $font-primary;
+
+	&--vertical {
+		flex-direction: column;
+	}
+
+	&--horizontal {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.radio-option {
+		position: relative;
+		cursor: pointer;
+
+		input[type="radio"] {
+			display: none;
+		}
+
+		span {
+			display: inline-block;
+			padding: 0.5rem 1rem;
+			border: 2px solid #ccc;
+			border-radius: 6px;
+			font-size: 1rem;
+			transition: all 0.2s ease-in-out;
+			user-select: none;
+		}
+
+		.radio-input {
+      &--selected + span {
+        background-color: $color-black;
+        color: $color-white;
+        border-color: $color-black;
+      }
+    }
+		&:hover span {
+			border-color: $color-black;
+
+		}
+	}
+}

@@ -2,6 +2,8 @@
 @import "../mixins.scss";
 .nav {
 	background-color: transparent;
+
+	background-size: cover;
 	position: fixed;
 	left: 0;
 	right: 0;

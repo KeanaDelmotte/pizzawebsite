@@ -1,48 +1,19 @@
 {
 	"phones": [
 		{
-			"name": "City Bowl",
-			"PhoneNumber": "+27-712-555-134"
-		},
-		{
-			"name": "N1 City",
-
-			"PhoneNumber": "+27-725-552-416"
-		},
-		{
-			"name": "Green Point",
-
-			"PhoneNumber": "+27-555-670-725"
-		},
-		{
-			"name": "Sea Point",
-
-			"PhoneNumber": "+27-605-556-961"
-		},
-		{
-			"name": "Tokai",
-
-			"PhoneNumber": "+27-555-873-990"
-		},
-		{
-			"name": "Fish Hoek",
-
-			"PhoneNumber": "+27-812-555-658"
-		},
-		{
 			"name": "Century City",
 
-			"PhoneNumber": "+27-555-107-513"
+			"PhoneNumber": "+27-111-111-111"
 		},
 		{
 			"name": "Bellville",
 
-			"PhoneNumber": "+27-710-555-050"
+			"PhoneNumber": "+27-222-222-222"
 		},
 		{
 			"name": "Parow",
 
-			"PhoneNumber": "+27-555-234-273"
+			"PhoneNumber": "+27-333-333-333"
 		}
 	],
 	"emails": [
@@ -58,7 +29,7 @@
 	"website": [
 		{
 			"name": "Web address",
-			"adress": "www.pizza.me.co.za"
+			"adress": "www.redbrickpizza.co.za"
 		}
 	]
 }

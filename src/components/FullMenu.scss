@@ -45,7 +45,7 @@
 	border-radius: 0.5rem;
 
 	display: grid;
-	grid-template-columns: [wallpaper-start] 4fr [wallpaper-end menu-start] 8fr [menu-end ];
+	grid-template-columns: [wallpaper-start] 4fr [wallpaper-end menu-start] 8fr [menu-end];
 	width: 80%;
 	margin: 0 auto;
 	box-shadow: 2px 4px 8px 3px rgba(105, 105, 105, 1);
@@ -118,6 +118,7 @@
 				color: $color-red;
 				font-family: $font-primary;
 				align-self: center;
+				text-transform: capitalize;
 			}
 			&__divider {
 				grid-row: desc-start 2 / desc-end 2;
